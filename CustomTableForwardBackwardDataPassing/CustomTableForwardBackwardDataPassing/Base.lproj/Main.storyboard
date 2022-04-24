@@ -8,16 +8,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Employee List Table View Controller-->
+        <scene sceneID="3xe-In-2Nh">
+            <objects>
+                <viewController id="CjC-Kg-ocb" customClass="EmployeeListTableViewController" customModule="CustomTableForwardBackwardDataPassing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AU8-Rh-WMS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IfY-Gt-3o7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Jv-4T-wtn"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="IfY-Gt-3o7" firstAttribute="leading" secondItem="7Jv-4T-wtn" secondAttribute="leading" id="0MJ-c9-qsb"/>
+                            <constraint firstItem="IfY-Gt-3o7" firstAttribute="top" secondItem="7Jv-4T-wtn" secondAttribute="top" id="InG-Ef-5UC"/>
+                            <constraint firstItem="7Jv-4T-wtn" firstAttribute="trailing" secondItem="IfY-Gt-3o7" secondAttribute="trailing" id="RF8-yx-QM6"/>
+                            <constraint firstItem="7Jv-4T-wtn" firstAttribute="bottom" secondItem="IfY-Gt-3o7" secondAttribute="bottom" id="kSx-VL-Vgg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ksV-Yu-O36"/>
+                    <connections>
+                        <outlet property="employeeTableView" destination="IfY-Gt-3o7" id="GwY-YW-dXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLn-Aq-i1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="72"/>
+        </scene>
         <!--Employee Details-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Employee Details" id="BYZ-38-t0r" customClass="EmployeeDetailsViewController" customModule="CustomTableForwardBackwardDataPassing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeDetailsViewController" title="Employee Details" id="BYZ-38-t0r" customClass="EmployeeDetailsViewController" customModule="CustomTableForwardBackwardDataPassing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMP. ID No." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ad8-cJ-6h8">
-                                <rect key="frame" x="20" y="188" width="374" height="40"/>
+                                <rect key="frame" x="20" y="144" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="58C-pq-iJb"/>
                                 </constraints>
@@ -25,7 +56,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMP. NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17I-Wg-4vC">
-                                <rect key="frame" x="20" y="278" width="374" height="40"/>
+                                <rect key="frame" x="20" y="234" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="njg-LQ-wE1"/>
                                 </constraints>
@@ -33,7 +64,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMP. DEPARTMENT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KF8-Pc-68f">
-                                <rect key="frame" x="20" y="458" width="374" height="40"/>
+                                <rect key="frame" x="20" y="414" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0za-um-Q9g"/>
                                 </constraints>
@@ -41,13 +72,35 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMP. Contact" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuw-cN-ibp">
-                                <rect key="frame" x="20" y="368" width="374" height="40"/>
+                                <rect key="frame" x="20" y="324" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="CMc-Sd-0dN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuf-2V-nQn">
+                                <rect key="frame" x="40" y="514" width="334" height="40"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bVm-gS-VsB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Display Check Employee Details">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkEmpDetailsButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="cLp-TW-jeY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
@@ -61,9 +114,12 @@
                             <constraint firstItem="KF8-Pc-68f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ym4-YD-3LH"/>
                             <constraint firstItem="ad8-cJ-6h8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bY5-3z-BpW"/>
                             <constraint firstItem="17I-Wg-4vC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n8p-Uy-sSg"/>
+                            <constraint firstItem="Iuf-2V-nQn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="rmb-RI-d1l"/>
                             <constraint firstItem="ad8-cJ-6h8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="sSB-BJ-W4i"/>
                             <constraint firstItem="fuw-cN-ibp" firstAttribute="top" secondItem="17I-Wg-4vC" secondAttribute="bottom" constant="50" id="wFs-sp-Uii"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iuf-2V-nQn" secondAttribute="trailing" constant="40" id="wVq-19-D8c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fuw-cN-ibp" secondAttribute="trailing" constant="20" id="xJI-6Z-sGW"/>
+                            <constraint firstItem="Iuf-2V-nQn" firstAttribute="top" secondItem="KF8-Pc-68f" secondAttribute="bottom" constant="60" id="yKW-fT-pYd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="So3-Ib-Dje"/>
@@ -166,17 +222,26 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VdQ-aJ-GAu"/>
+                        <segue destination="CjC-Kg-ocb" kind="relationship" relationship="rootViewController" id="Yab-l9-0Jf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqk-sm-Hmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="72"/>
+            <point key="canvasLocation" x="-494" y="72"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
